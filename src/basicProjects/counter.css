@@ -1,0 +1,116 @@
+
+html{
+    background-color:rgb(220, 220, 220)  ;
+}
+body{
+    
+    min-width: 800px; 
+    margin: auto;
+    justify-self: center;
+    font-size: 1.1rem;
+    font-family:Arial, Helvetica, sans-serif;
+ 
+  
+    
+}
+#root{
+ 
+    margin: auto;
+    margin-top: 25%;
+    
+    
+}
+#counter-app{
+    width: 50%;
+    text-align: center;
+    justify-self: center;
+    background-color: rgb(175, 175, 175);
+    border-radius: 30px;
+    padding: 5px;
+
+}
+#counter-app button{
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin: auto;
+    background-color: #eeeeee;
+}
+#counter-app button:hover{
+    background-color: black;
+    color: white;
+    
+    
+}
+#counter-app button:active{
+    background-color: grey;
+}
+
+#todo-app{
+    padding: 10px;
+    color: white;
+    background-color: rgb(245, 245, 245) ;
+
+    width: 60%;
+    padding-bottom: 30px;
+    position: relative;
+
+  
+   
+    margin: auto;
+    color: rgb(0, 0, 0);
+
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+
+    
+    
+
+}
+
+.greys{
+    
+    background-color:rgb(215, 215, 215) ;
+    margin: auto;
+    border: none;
+    padding: 5px;
+    font-size: inherit;
+    width: 50%;
+    height: fit-content;
+    margin-top: 5px;
+
+    
+
+}
+
+#todo-app input:focus{
+    
+    outline:1px solid rgb(131, 131, 131);
+}
+.todo{
+    display: flex;
+
+    justify-content: space-between;
+    border-radius: 10px;
+    
+  
+}
+.todoButtons{
+    background-color: black;
+    color: white;
+    justify-self: end;
+    margin-left: 5px;
+    border-radius: 30px;
+    height: 1.8em;
+    border: none;
+    padding: 0px 10px;
+
+    
+}
+.todoButtons:hover{
+    background-color: rgb(75, 75, 75);
+}
+
+
+#input-field{
+    text-align: center;
+}
