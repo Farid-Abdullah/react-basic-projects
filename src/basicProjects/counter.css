@@ -1,6 +1,6 @@
 
 html{
-    background-color:rgb(255, 255, 255)  ;
+    background-color:rgba(182, 182, 182, 0.183)  ;
 }
 body{
     
@@ -136,3 +136,82 @@ img{
 
    box-shadow:  0px 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/* the calculator component*/
+#calculator{
+    padding: 4px;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    background-color: white;
+    box-shadow:0px 4px 12px rgba(0, 0, 0, 0.301) ;
+
+    border-radius: 5px; /* round object are more appealing to eyes :)*/
+
+}
+
+/* calculator input field:  */
+#calc-input{
+    width: 100%;
+    padding: 10% 0 10% 0 ; /*top and bottom % is based on the width*/
+    margin: auto;
+    text-align: end; 
+
+    border: none;
+    margin-bottom: 5px;
+    
+    
+}
+
+/* Managing grid for the buttons:  */
+.buttons-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 2px;
+
+    
+
+  
+   
+}
+
+/* making some bottons span twice the space: */
+.clear,.equal{
+    grid-column: span 2;
+}
+.plus{
+    grid-row-start: 3;
+    grid-row: span 2;
+
+}
+
+
+/* Buttons styling:  */
+.num {
+  background-color: rgb(0, 0, 0); 
+  color: white;
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; /*changes the cursor type, it's a pointing finger right now*/ 
+
+}
+
+.num:hover {
+  background-color: rgb(67, 67, 67);
+  border: rgb(49, 49, 49);
+
+}
+
+
+.num:active {
+  background-color: rgb(134, 134, 134); 
+ 
+}
+
+
