@@ -286,3 +286,45 @@ img{
     transform: scale(1);
     background-color: black;
 }
+
+
+/* accordian.jsx styling; */
+
+.accordian-container{
+    background-color: rgba(0, 0, 0, 0.793);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    color: rgba(203, 203, 203, 0.796);
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordian-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.a-icon{
+    font-size: 1.5em;
+}
+.accordian-header> *{
+    
+    height: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.singleAccordian{
+    
+    width: 80%;
+    padding: 10px;
+    margin: 20px;
+    background-color: black;
+ 
+}
+
+.desc{
+    padding: 10px 20px;
+}

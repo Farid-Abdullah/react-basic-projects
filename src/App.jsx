@@ -7,12 +7,19 @@ import ColorToggle from './basicProjects/ColorToggle'
 import HiddenSearchBar from './basicProjects/HiddenSearchBar'
 import Testimonials from './basicProjects/Testimonials'
 
+import {accrodianData} from './content/QnA.js'
+import Accordian from './basicProjects/Accordian.jsx'
+
 const App = () => {
   
   return (
     <div>
  
-     <Testimonials  />
+     <div className="accordian-container">
+      {accrodianData.map(({title,desc,id})=> (
+        <Accordian title = {title} desc = {desc} Qid = {id} />
+      ))}
+     </div>
      
       
     </div>
