@@ -4,10 +4,8 @@ html{
 }
 body{
     
-    min-width: 800px; 
-    max-width: 1920px;
-    margin: auto;
-    justify-self: center;
+
+
     font-size: 1.1rem;
     font-family:Arial, Helvetica, sans-serif;
  
@@ -214,4 +212,77 @@ img{
  
 }
 
+.toggleColorApp{
+    width: 100%;
+    padding: 20% 0 20% 0;
+}
 
+
+.h-container{
+    width: 100%;
+    padding: 25% 0 25% 0;
+    text-align: center;
+
+    
+
+}
+
+/* testimonials:  */
+
+.testimonials{
+    display: flex; /* trying to make the buttons stick to the end */
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+    height: 160px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15%;
+    padding: 20px;
+    background-color: rgba(205, 202, 202, 0.289);
+    box-shadow:0px 4px 12px rgba(0, 0, 0, 0.301) ;
+    
+}
+@keyframes animationName {
+  from { opacity: 0; transform: translateY(2px); } /* Start slightly off and invisible */
+  to { opacity: 1; transform: translateY(0); }     /* End fully visible and in place */
+}
+
+.author{
+    font-weight: bold;
+    animation: animationName 0.2s;
+ 
+}
+.quote{
+    color: grey;
+    font-style: italic;
+    margin-bottom: 10px; /* for buttons positioning*/
+    animation: animationName 0.2s;
+}
+.previous-next{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto; /* for buttons positioning */
+}
+.previous-next>button{
+    background-color: rgba(0, 0, 0, 0.755);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+
+    transition: transform 0.2s;
+     
+}
+.previous-next>button:hover{
+
+    transform: scale(0.9);
+   
+    cursor: pointer;
+    
+}
+.previous-next>button:active{
+    transform: scale(1);
+    background-color: black;
+}
