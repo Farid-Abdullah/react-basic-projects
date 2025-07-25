@@ -328,3 +328,68 @@ img{
 .desc{
     padding: 10px 20px;
 }
+
+/* From.jsx */
+.error{
+    color: red;
+    font-size: 0.7em;
+}
+
+.form-container{
+
+    width: 60%;
+    margin: auto;
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-between;
+   background-color: rgba(2, 29, 27, 0.99);
+   box-shadow:0px 4px 12px rgba(0, 0, 0, 0.592)
+   
+}
+
+.form-image{
+    width: 50%;
+    margin: 0px; /* there was margin at the top*/
+    
+}
+
+.form-container>form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+}
+.form-container>form>input{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: white;
+    background-color:rgba(2, 29, 27, 0.644);
+}
+.form-container>form>input:focus{
+    outline: none;
+    background-color: rgba(1, 19, 18, 0.635);
+}
+
+.form-button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 50%;
+    margin-left: auto;
+    margin-top: 10px;
+    
+}
+.form-button:hover{
+    background-color: rgb(18, 18, 18);
+    outline: 2px solid rgb(0, 0, 0);
+
+}
+.form-button:active{
+    background-color: black;
+    scale: 0.95;
+    transition: 0.15s ;
+}

@@ -9,17 +9,19 @@ import Testimonials from './basicProjects/Testimonials'
 
 import {accrodianData} from './content/QnA.js'
 import Accordian from './basicProjects/Accordian.jsx'
+import Form from './basicProjects/form.jsx'
 
 const App = () => {
   
   return (
     <div>
+      <Form />
  
-     <div className="accordian-container">
+     {/* <div className="accordian-container">
       {accrodianData.map(({title,desc,id})=> (
         <Accordian title = {title} desc = {desc} Qid = {id} />
       ))}
-     </div>
+     </div> */}
      
       
     </div>
