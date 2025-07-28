@@ -393,3 +393,43 @@ img{
     scale: 0.95;
     transition: 0.15s ;
 }
+
+/* MemoryGame styling: */
+
+/* NumEdition: */
+.num-edition{
+    width: 70%;
+    margin: auto;
+    
+    
+}
+.num-container{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgb(83, 83, 83);
+
+
+    
+}
+.rand-num{
+    
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(83, 83, 83);
+    align-content: center;
+   
+    cursor: default;
+    user-select: none;  /* so that I cursor thing don't appear when i click the text*/ 
+    font-size: 2em;
+
+}
+.rand-num:active{
+   border: yellow;
+}
+
+

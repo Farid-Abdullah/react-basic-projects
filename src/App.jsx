@@ -10,12 +10,14 @@ import Testimonials from './basicProjects/Testimonials'
 import {accrodianData} from './content/QnA.js'
 import Accordian from './basicProjects/Accordian.jsx'
 import Form from './basicProjects/form.jsx'
+import NumEdition from './basicProjects/MemoryGame/NumEdition.jsx'
 
 const App = () => {
   
   return (
     <div>
-      <Form />
+      
+      <NumEdition />
  
      {/* <div className="accordian-container">
       {accrodianData.map(({title,desc,id})=> (
