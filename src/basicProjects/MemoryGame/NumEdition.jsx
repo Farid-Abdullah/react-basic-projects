@@ -27,18 +27,10 @@ const NumEdition = () => {
     const latestAttempt = useRef('');
 
     // for the buttons to get highlighted while playing
-    const [num1,setNum1] = useState('');
-    const [num2,setNum2] = useState('');
-    const [num3,setNum3] = useState('');
-
-    const [num4,setNum4] = useState('');
-    const [num5,setNum5] = useState('');
-    const [num6,setNum6] = useState('');
-
-    const [num7,setNum7] = useState('');
-    const [num8,setNum8] = useState('');
-    const [num9,setNum9] = useState('');
-
+    const [clickBlockStyle,setClickBlockStyle] = useState({}) 
+    // discarded but name still used: clickedBlockStyle will contain index as key and style as value e.g {0:'style...', 1:'style2...}
+    // new way of using this state: {index:'correct'} or {index:'incorrect'} for every block,
+    // then, if the block is correct render a style for it etc etc etc
     // **********************************************
 
     const answer = '123456789';
@@ -48,7 +40,7 @@ const NumEdition = () => {
     }, [attempt]); 
 
     const handleStart = () =>{
-        
+        setClickBlockStyle({})
         setScore(0)
         setAttempt('')
         setAttemptStarted(true);
@@ -124,22 +116,54 @@ it is better than using sort() or tosorted method with math.random()*/
         return S
     }
     
-    const handleScore = (num) =>{
+    const handleScore = (num,numIndex) =>{
+        
         
         if(playStarted && attempt.length<9){
-            setAttempt(attempt + num.toString())
+            
+         
+        const currentPos = attempt.length // this will serve as index for checking if numbers match each other
+        let Choice = answer[currentPos] === num.toString() // whether the current number in the attempt is chosen correctly bla bla
+        console.log(Choice, num.toString(), answer[currentPos])
+        const theIndex = numArray.indexOf(num)
+        if(Choice){ // if correctly chosen a block
+               console.log("numIndex:",theIndex)
+            setClickBlockStyle({...clickBlockStyle, [theIndex]:'correct'})
+         
+        } else {
+               console.log("numIndex:",theIndex)
+            setClickBlockStyle({...clickBlockStyle ,[theIndex]:'incorrect'})
+        }
+        setAttempt(attempt + num.toString())
             console.log(attempt,'from handlescore')
-        } 
        
             }
-        
+        }
+    
+    const getTheStyle = (numIndex) =>{
+        if(!clickBlockStyle[numIndex]){
+            return {}
+        } else {
+            if(clickBlockStyle[numIndex] === 'correct'){
+                return {border:'5px solid green',backgroundColor:'lightgreen'}
+
+            } else {
+                return {border:'5px solid red',backgroundColor:'pink'}
+            }
+        }
+    }
+    
     const renderNumBlocks = (num,numIndex) => {
         let displayWhat = '?'
         if(showNums){
             displayWhat = num
+        } else if (clickBlockStyle[numIndex]){
+            displayWhat = num
         }
-
-        return <span className='rand-num' onClick={()=>handleScore(num,numIndex)}>{displayWhat}</span>
+        return <span key={numIndex} className='rand-num' 
+        onClick={()=>handleScore(num,numIndex)}
+        style={getTheStyle(numIndex)}
+        >{displayWhat}</span>
     }
 
   return (
