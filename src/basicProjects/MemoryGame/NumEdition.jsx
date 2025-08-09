@@ -26,6 +26,23 @@ const NumEdition = () => {
 
     const latestAttempt = useRef('');
 
+    // for the buttons to get highlighted while playing
+    const [num1,setNum1] = useState('');
+    const [num2,setNum2] = useState('');
+    const [num3,setNum3] = useState('');
+
+    const [num4,setNum4] = useState('');
+    const [num5,setNum5] = useState('');
+    const [num6,setNum6] = useState('');
+
+    const [num7,setNum7] = useState('');
+    const [num8,setNum8] = useState('');
+    const [num9,setNum9] = useState('');
+
+    // **********************************************
+
+    const answer = '123456789';
+
       useEffect(() => {
         latestAttempt.current = attempt;
     }, [attempt]); 
@@ -95,7 +112,7 @@ it is better than using sort() or tosorted method with math.random()*/
     }
 
     const showScore = (atmpt) => {
-        let answer = '123456789';
+        
         let S = 0;
         console.log(atmpt,'from show score')
         for(let a = 0; a<atmpt.length; a++){
@@ -119,14 +136,15 @@ it is better than using sort() or tosorted method with math.random()*/
     
 
   return (
-    <div className='num-edition'>
-        <div className="game-message">
-        <h1>Test your memory with this game</h1>
-        <p>numbers from 1 to 9 will appear in the following boxes for 4 seconds. Memorize the positions, and then click the boxes in order from 1 to 9</p>
-        <button onClick={handleStart}>{!attemptStarted ? `Start`: ``}</button>
-         {attemptStarted ? <h2>{countdown}</h2>:<h2></h2>}
-        {attempt? <h1>Attempt:{attempt}</h1>: ``}
+    <div>
+        <h1 style={{textAlign:'center'}}>Memory game</h1>
+    <div className='main-div'>
+        
+    
+        <div className='countdown side-div'>
+         {attemptStarted ? <h2> <br/> {countdown}</h2>:<h2 className='strt-btn' onClick={handleStart}><br/>Start</h2>}
         </div>
+        
        
         <div className='num-container'>
         <span onClick={() => handleScore(numArray[2])} className='rand-num'>{showNums ? <p>{numArray[2]}</p>:<p>?</p>}</span>
@@ -140,8 +158,11 @@ it is better than using sort() or tosorted method with math.random()*/
         <span onClick={() => handleScore(numArray[4])} className='rand-num'>{showNums ? <p>{numArray[4]}</p>:<p>?</p>}</span>
         </div>
         
-        {!attemptStarted? <h1>Your score: {score}</h1>:<h1></h1>}
-        
+        <div className='score side-div'>
+        {!attemptStarted? <h1>{score}<br/>SCORE</h1>:<h1></h1>}
+        </div>
+    </div>
+    {attemptStarted? <h2>attempt:{attempt}</h2>:<h2></h2>}
     </div>
   )
 }

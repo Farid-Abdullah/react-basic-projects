@@ -9,7 +9,7 @@ body{
     font-size: 1.1rem;
     font-family:Arial, Helvetica, sans-serif;
  
-  
+
     
 }
 
@@ -396,40 +396,92 @@ img{
 
 /* MemoryGame styling: */
 
-/* NumEdition: */
-.num-edition{
-    width: 70%;
+
+.main-div{
     margin: auto;
-    
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+
+
     
 }
 .num-container{
-
+    width: 400px;
+    height: 400px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: fit-content;
-    height: fit-content;
+    grid-template-rows: repeat(3, 1fr);
+
+
+    padding: 10px;
     margin: auto;
     text-align: center;
-    border: 1px solid rgb(83, 83, 83);
+    gap: 10px;
+    background-color: white;
+
+    border-radius: 10px;
+
+       box-shadow:0px 4px 12px rgba(0, 0, 0, 0.592)
 
 
     
 }
 .rand-num{
     
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgb(83, 83, 83);
+    background-color: grey;
     align-content: center;
-   
+   border-radius: 10px;
     cursor: default;
     user-select: none;  /* so that I cursor thing don't appear when i click the text*/ 
     font-size: 2em;
+    transition: 0.2s;
+
+}
+.rand-num:hover{
+   background-color: rgb(170, 170, 170);
+
+   scale: 1.05;
+   
 
 }
 .rand-num:active{
-   border: yellow;
+    scale: 0.98;
 }
 
 
+
+
+
+
+.side-div{
+
+    height: 150px;
+    background-color: darkgray;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px;
+
+    
+   
+}
+.side-div>*{
+    height: 100%;
+    width: 100%;
+    margin: 1px;
+    user-select: none;
+    border-radius: 25px;
+    text-align: center;
+
+
+  
+}
+
+.strt-btn:hover{
+    scale: 1.1;
+    transition: 0.1s;
+
+    background-color: rgb(151, 151, 151);
+}
