@@ -133,7 +133,14 @@ it is better than using sort() or tosorted method with math.random()*/
        
             }
         
-    
+    const renderNumBlocks = (num,numIndex) => {
+        let displayWhat = '?'
+        if(showNums){
+            displayWhat = num
+        }
+
+        return <span className='rand-num' onClick={()=>handleScore(num,numIndex)}>{displayWhat}</span>
+    }
 
   return (
     <div>
@@ -146,17 +153,7 @@ it is better than using sort() or tosorted method with math.random()*/
         </div>
         
        
-        <div className='num-container'>
-        <span onClick={() => handleScore(numArray[2])} className='rand-num'>{showNums ? <p>{numArray[2]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[3])} className='rand-num'>{showNums ? <p>{numArray[3]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[1])} className='rand-num'>{showNums ? <p>{numArray[1]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[6])} className='rand-num'>{showNums ? <p>{numArray[6]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[8])} className='rand-num'>{showNums ? <p>{numArray[8]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[0])} className='rand-num'>{showNums ? <p>{numArray[0]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[5])} className='rand-num'>{showNums ? <p>{numArray[5]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[7])} className='rand-num'>{showNums ? <p>{numArray[7]}</p>:<p>?</p>}</span>
-        <span onClick={() => handleScore(numArray[4])} className='rand-num'>{showNums ? <p>{numArray[4]}</p>:<p>?</p>}</span>
-        </div>
+        <div className='num-container'>{numArray.map((num,numIndex)=>renderNumBlocks(num,numIndex))}</div>
         
         <div className='score side-div'>
         {!attemptStarted? <h1>{score}<br/>SCORE</h1>:<h1></h1>}
