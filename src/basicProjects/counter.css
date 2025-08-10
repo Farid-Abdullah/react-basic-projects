@@ -5,10 +5,10 @@ html{
 body{
     
 
-
+    margin: auto;
     font-size: 1.1rem;
     font-family:Arial, Helvetica, sans-serif;
- 
+    padding: 10px;
 
     
 }
@@ -327,6 +327,7 @@ img{
 
 .desc{
     padding: 10px 20px;
+    
 }
 
 /* From.jsx */
@@ -484,4 +485,30 @@ img{
     transition: 0.1s;
 
     background-color: rgb(151, 151, 151);
+}
+
+.navigator-div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px 40px;
+
+    text-align: center;
+    
+    
+}
+.project-button{
+    background-color: rgb(177, 177, 177);
+    padding: 5px;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.project-button:hover{
+    scale: 1.1;
+    background-color: gray;
+}
+.project-button:active{
+    scale:0.95;
+    background-color: rgb(156, 156, 156);
 }

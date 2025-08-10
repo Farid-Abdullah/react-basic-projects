@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import {accrodianData} from '../content/QnA.js'
 
-const Accordian = ({title, desc, Qid}) => {
+const SingleAccordian = ({title, desc, Qid}) => {
     const [isActive , setIsActive] = useState(false);
 
   return (
@@ -13,5 +14,18 @@ const Accordian = ({title, desc, Qid}) => {
     </div>
   )
 }
+
+
+
+export const Accordian = () => {
+  return (
+    <div className="accordian-container">
+      {accrodianData.map(({title,desc,id})=> (
+        <SingleAccordian title = {title} desc = {desc} Qid = {id} />
+      ))}
+     </div>
+  )
+}
+
 
 export default Accordian

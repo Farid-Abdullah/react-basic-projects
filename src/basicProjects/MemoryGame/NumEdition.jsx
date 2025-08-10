@@ -106,7 +106,6 @@ it is better than using sort() or tosorted method with math.random()*/
     const showScore = (atmpt) => {
         
         let S = 0;
-        console.log(atmpt,'from show score')
         for(let a = 0; a<atmpt.length; a++){
             if(atmpt[a] === answer[a]){
                 S++
@@ -124,18 +123,18 @@ it is better than using sort() or tosorted method with math.random()*/
          
         const currentPos = attempt.length // this will serve as index for checking if numbers match each other
         let Choice = answer[currentPos] === num.toString() // whether the current number in the attempt is chosen correctly bla bla
-        console.log(Choice, num.toString(), answer[currentPos])
+
         const theIndex = numArray.indexOf(num)
         if(Choice){ // if correctly chosen a block
-               console.log("numIndex:",theIndex)
+               
             setClickBlockStyle({...clickBlockStyle, [theIndex]:'correct'})
          
         } else {
-               console.log("numIndex:",theIndex)
+               
             setClickBlockStyle({...clickBlockStyle ,[theIndex]:'incorrect'})
         }
         setAttempt(attempt + num.toString())
-            console.log(attempt,'from handlescore')
+            
        
             }
         }

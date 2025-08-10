@@ -24,7 +24,7 @@ const ColorToggle = () => {
             </button>
             <div className="toggle-content">
                 <h1>Hello world from ColorToggle.jsx <br />
-                 change the color of this page</h1>
+                 change the color of this container</h1>
             </div>
     </div>
   )
