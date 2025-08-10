@@ -6,8 +6,7 @@ const HiddenSearchBar = () => {
     const [bgColor, setBgColor] = useState("")
     const [txtColor, setTxtColor] = useState("")
     
-    document.body.style.backgroundColor = bgColor;
-    document.body.style.color = txtColor;
+
     const handleClick = (e) => {
         
       
