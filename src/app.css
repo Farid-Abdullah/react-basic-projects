@@ -15,12 +15,13 @@ body{
 
 #counter-app{
     width: 50%;
+    min-width: 400px;
     text-align: center;
     justify-self: center;
     background-color: rgb(175, 175, 175);
     border-radius: 30px;
     padding: 5px;
-    margin-top: 25%;
+    margin-top: 10%;
 
 }
 #counter-app button{
@@ -41,6 +42,7 @@ body{
 }
 
 #todo-app{
+     min-width: 400px;
     padding: 10px;
     color: white;
     background-color: rgb(245, 245, 245) ;
@@ -58,7 +60,7 @@ box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 
     
     
-    margin-top: 25%;
+    margin-top: 10%;
 }
 
 .greys{
@@ -111,6 +113,7 @@ box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 
 
 #Meals{
+    min-width: 600px;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -139,11 +142,12 @@ img{
 
 /* the calculator component*/
 #calculator{
+    min-width: 250px;
     padding: 4px;
     width: 30%;
     text-align: center;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 10%;
     background-color: white;
     box-shadow:0px 4px 12px rgba(0, 0, 0, 0.301) ;
 
@@ -164,6 +168,7 @@ img{
     
 }
 
+
 /* Managing grid for the buttons:  */
 .buttons-container{
     width: 100%;
@@ -172,10 +177,6 @@ img{
     grid-template-rows: repeat(5,1fr);
     gap: 2px;
 
-    
-
-  
-   
 }
 
 /* making some bottons span twice the space: */
@@ -191,29 +192,31 @@ img{
 
 /* Buttons styling:  */
 .num {
-  background-color: rgb(0, 0, 0); 
+  background-color: black; 
   color: white;
   padding: 10px 20px;
   border: none; 
   border-radius: 5px;
   cursor: pointer; /*changes the cursor type, it's a pointing finger right now*/ 
-
+  transition: 0.3s;
 }
 
 .num:hover {
-  background-color: rgb(67, 67, 67);
-  border: rgb(49, 49, 49);
+  background-color: rgb(45, 45, 45);
+  scale: 1.02;
 
 }
 
 
 .num:active {
-  background-color: rgb(134, 134, 134); 
+  background-color: black; 
+  scale: 0.95;
  
 }
 
 .toggleColorApp{
     width: 100%;
+    min-width: 600px;
     padding: 20% 0 20% 0;
 }
 
@@ -230,6 +233,7 @@ img{
 /* testimonials:  */
 
 .testimonials{
+    min-width: 400px;
     display: flex; /* trying to make the buttons stick to the end */
     flex-direction: column;
     justify-content: space-between;
@@ -238,7 +242,7 @@ img{
     height: 160px;
     text-align: center;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 13%;
     padding: 20px;
     background-color: rgba(205, 202, 202, 0.289);
     box-shadow:0px 4px 12px rgba(0, 0, 0, 0.301) ;
@@ -291,15 +295,21 @@ img{
 /* accordian.jsx styling; */
 
 .accordian-container{
+    
+    min-width: 600px;
     background-color: rgba(0, 0, 0, 0.793);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
     color: rgba(203, 203, 203, 0.796);
 
-    margin: 0;
+    margin-top: 15px;
+
+    border-radius: 5px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .accordian-header{
     display: flex;
@@ -337,10 +347,10 @@ img{
 }
 
 .form-container{
-
+    min-width: 500px;
     width: 60%;
     margin: auto;
-    margin-top: 6%;
+    margin-top: 3%;
     display: flex;
     justify-content: space-between;
    background-color: rgba(2, 29, 27, 0.99);
@@ -399,7 +409,9 @@ img{
 
 
 .main-div{
+    
     margin: auto;
+   
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
@@ -410,8 +422,8 @@ img{
     
 }
 .num-container{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -460,6 +472,7 @@ img{
 .side-div{
 
     height: 150px;
+    width: 150px;
     background-color: darkgray;
     border-radius: 25px;
     text-align: center;
@@ -512,3 +525,4 @@ img{
     scale:0.95;
     background-color: rgb(156, 156, 156);
 }
+

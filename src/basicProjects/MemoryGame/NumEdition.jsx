@@ -167,7 +167,7 @@ it is better than using sort() or tosorted method with math.random()*/
 
   return (
     <div>
-        <h1 style={{textAlign:'center'}}>Memory game</h1>
+        <h2 style={{textAlign:'center'}}>Memory game</h2>
     <div className='main-div'>
         
     
@@ -182,7 +182,6 @@ it is better than using sort() or tosorted method with math.random()*/
         {!attemptStarted? <h1>{score}<br/>SCORE</h1>:<h1></h1>}
         </div>
     </div>
-    {attemptStarted? <h2>attempt:{attempt}</h2>:<h2></h2>}
     </div>
   )
 }
