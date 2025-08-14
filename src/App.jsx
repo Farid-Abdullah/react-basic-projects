@@ -6,7 +6,7 @@ import Calculator from './basicProjects/Calculator'
 import ColorToggle from './basicProjects/ColorToggle'
 import HiddenSearchBar from './basicProjects/HiddenSearchBar'
 import Testimonials from './basicProjects/Testimonials'
-
+import Wordle from './basicProjects/MemoryGame/Wordle.jsx'
 import './app.css'
 
 import Accordian from './basicProjects/Accordian.jsx'
@@ -31,8 +31,9 @@ const App = () => {
       <div className="project-button" onClick={() => setActiveProject(<Form />)}>Form</div>
       <div className="project-button" onClick={() => setActiveProject(<Meals />)}>Meals(grid)</div>
       <div className="project-button" onClick={() => setActiveProject(<Testimonials />)}>Testimonials</div>
-      <div className="project-button" onClick={() => setActiveProject(<NumEdition />)}>Game</div>
+      <div className="project-button" onClick={() => setActiveProject(<NumEdition />)}>memoryGame</div>
       <div className="project-button" onClick={() => setActiveProject(<ColorToggle />)}>ColorToggle</div>
+      <div className="project-button" onClick={() => setActiveProject(<Wordle />)}>wordleGame</div>
       </div>
       
       
