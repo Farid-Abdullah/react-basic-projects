@@ -529,38 +529,41 @@ img{
 
 /* wordle styling */
 
-.wordleMain{
+.box-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
-    margin: auto;
-    
-    margin-top: 5%;
+    gap: 3px;
+    justify-self: center;
+    margin-top: 3%;
 }
-
-.wordle-line{
+.box-line{
     display: flex;
-    gap: 5px;
-    margin-bottom: 5px ;
+    gap: 3px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+
+
+    border: 1px solid grey;
 }
 
-.wordle-box{
-    
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
-    font: 30px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
-    
-}
-
-.green{
+.correct-box{
     background-color: green;
 }
-
-
-
+.correct-but-wrong-box{
+    background-color: orange;
+}
+.wrong-box{
+    background-color: grey;
+}
+.restart-wordle{
+    width: 300px;
+    border: 2px solid black;
+}
